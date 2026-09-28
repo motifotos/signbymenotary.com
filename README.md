@@ -1,41 +1,42 @@
 # Sign By Me
 
-Web estática de Sign By Me. Sin framework, compilación ni dependencias de desarrollo.
+Web estática, sin framework, compilación ni dependencias de desarrollo.
 
-## Dónde modificar cada cosa
+## Dos páginas independientes
 
-- `index.html`: textos, precios, enlaces y secciones, en el orden en que aparecen.
-- `styles.css`: todos los estilos de la página, organizados por secciones.
-- `script.js`: apertura y cierre del menú móvil y año del pie de página.
-- `assets/`: las imágenes que usa la página y el favicon.
-- `CNAME`: dominio de GitHub Pages. No cambiar al editar el diseño.
+- `index.html`: página principal verde petróleo y dorado, con el logo transparente, la foto al inicio, las cinco tarifas visibles y el pie claro.
+- `index01.html`: versión secundaria azul, conservada con su diseño y contenido anterior.
 
-## Una sola paleta y una sola hoja de estilos
+Cada HTML contiene su propio CSS en `<style>` y su JavaScript al final en `<script>`. No hay archivos CSS o JavaScript separados, selector de temas ni capas de versiones antiguas. Los colores se modifican en `:root` dentro de cada HTML.
 
-Los colores están al principio de `styles.css`, dentro de `:root`. No hay temas alternativos, selector de color, CSS antiguo ni estilos en línea. El favicon usa el mismo azul de marca.
+La secundaria conserva su fuente DM Sans de Google Fonts. La principal usa fuentes del sistema y no requiere servicios externos para mostrar su diseño.
 
-Los bloques `@media` del final adaptan la misma página a escritorio, tablet y teléfono. Son necesarios para el diseño responsive; no son versiones diferentes del sitio.
+## Archivos necesarios
 
-Los enlaces a CSS, JavaScript y favicon llevan `?v=clean` para evitar la caché de la versión anterior. No generan archivos adicionales. Cambia ese valor al publicar una nueva revisión si necesitas invalidar la caché.
+- `assets/logo-transparent.png`: logo usado por la principal.
+- `assets/susana-profile.jpg`: fotografía usada por ambas páginas.
+- `assets/favicon.svg`: icono azul usado por la secundaria; la principal incorpora su icono en el HTML.
+- `assets/testimonials/`: tres retratos de muestra usados únicamente por el bloque de testimonios ficticios de la secundaria.
+- `CNAME`: dominio de GitHub Pages (`signbymenotary.com`). No modificar al editar el diseño.
 
-## Contenido y accesibilidad
+Las imágenes siguen separadas del código para facilitar su reemplazo. Todos los archivos de `assets/` tienen una referencia activa en alguna de las dos páginas.
 
-El texto principal es de 18 px; los secundarios no bajan de 16 px con el tamaño de letra predeterminado del navegador. El menú admite teclado y Escape. Su estado depende únicamente de `aria-expanded`, sin clases duplicadas. Tarifas y preguntas usan `<details>` nativo, sin JavaScript. El contenido y los enlaces siguen disponibles si JavaScript está desactivado.
+## Edición y comprobación
 
-## Vista previa local
+1. Editar `index.html` para cambiar la web principal; `index01.html` solo para modificar la secundaria.
+2. Revisar escritorio, tablet y móvil. El menú admite teclado y Escape.
+3. Comprobar precios, teléfono, correo y enlace de reservas.
+4. Publicar el cambio en GitHub para actualizar GitHub Pages.
 
-Desde esta carpeta:
+La principal no contiene testimonios ficticios. La secundaria conserva un bloque claramente identificado como ficticio: no presentarlo como reseñas reales. Ambas páginas mantienen su configuración `noindex, nofollow`; cualquier cambio de indexación debe ser deliberado.
+
+## Vista local
 
 ```sh
 python3 -m http.server 4174 --bind 127.0.0.1
 ```
 
-Abrir `http://127.0.0.1:4174/`. No hace falta instalar ni compilar nada.
+- Principal: `http://127.0.0.1:4174/`
+- Secundaria: `http://127.0.0.1:4174/index01.html`
 
-## Antes del lanzamiento público
-
-Los testimonios y retratos de muestra son ficticios y están identificados en un bloque separado. No presentarlos como reseñas reales: eliminar el bloque o sustituirlo por testimonios verificados y autorizados antes del lanzamiento definitivo.
-
-Se mantiene `noindex, nofollow` durante la presentación. Antes de permitir la indexación, confirmar datos, tarifas, disponibilidad, requisitos del servicio y HTTPS. Sign By Me presta servicios notariales; no es un despacho de abogados.
-
-Los cambios locales solo llegan al dominio cuando se publican en GitHub Pages.
+El historial de Git conserva las revisiones anteriores. Los archivos obsoletos no forman parte de la versión actual del repositorio.

@@ -1,0 +1,1274 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="noindex, nofollow">
+    <meta name="theme-color" content="#102a4c">
+    <meta name="description" content="Notarize your documents online with Sign By Me. The first notarial seal is $25. Book a video appointment with Susana Perla Maniera.">
+    <title>Sign By Me | Online Notarization from $25</title>
+    <link rel="icon" href="assets/favicon.svg?v=clean" type="image/svg+xml">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+    <style>
+/* 1. Colores y medidas globales. La web tiene una única paleta. */
+:root {
+  color-scheme: light;
+  --sans: "DM Sans", Arial, sans-serif;
+  --white: #fff;
+  --shell: 1160px;
+  --ink: #142c49;
+  --muted: #4c5d70;
+  --brand: #2b568a;
+  --brand-hover: #21446e;
+  --navy: #102a4c;
+  --hero-end: #214878;
+  --on-dark: #dce7f5;
+  --tint: #f2f5f9;
+  --line: #cbd5e2;
+  --focus: #f4b942;
+}
+
+/* 2. Base, tipografía y accesibilidad. */
+* {
+  box-sizing: border-box;
+}
+html {
+  scroll-padding-top: 110px;
+}
+body {
+  margin: 0;
+  background: var(--white);
+  color: var(--ink);
+  font: 400 1.125rem/1.6 var(--sans);
+  -webkit-font-smoothing: antialiased;
+}
+a {
+  color: var(--brand);
+  text-underline-offset: .22em;
+  text-decoration-thickness: 1px;
+}
+a:hover {
+  text-decoration-thickness: 2px;
+}
+button, summary {
+  font: inherit;
+}
+button {
+  cursor: pointer;
+}
+img {
+  display: block;
+  max-width: 100%;
+}
+h1, h2, h3, p, figure {
+  margin: 0;
+}
+h1, h2, h3 {
+  text-wrap: balance;
+}
+h1 {
+  font-size: clamp(2.5rem, 4.5vw, 3.75rem);
+  line-height: 1.08;
+  letter-spacing: -.045em;
+  font-weight: 600;
+}
+h2 {
+  font-size: clamp(2rem, 3.1vw, 2.625rem);
+  line-height: 1.18;
+  letter-spacing: -.035em;
+  font-weight: 600;
+}
+h3 {
+  font-size: 1.375rem;
+  line-height: 1.3;
+  letter-spacing: -.02em;
+  font-weight: 700;
+}
+:focus-visible {
+  outline: 3px solid var(--focus);
+  outline-offset: 4px;
+}
+[hidden] {
+  display: none !important;
+}
+.shell {
+  width: min(var(--shell), calc(100% - 80px));
+  margin-inline: auto;
+}
+.skip-link {
+  position: fixed;
+  top: 8px;
+  left: 8px;
+  z-index: 100;
+  background: var(--white);
+  padding: 12px 20px;
+  transform: translateY(-160%);
+}
+.skip-link:focus {
+  transform: translateY(0);
+}
+
+/* 3. Cabecera, navegación y botones compartidos. */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  background: var(--white);
+  border-bottom: 1px solid var(--line);
+}
+.nav-wrap {
+  min-height: 96px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 32px;
+}
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: var(--ink);
+  text-decoration: none;
+  flex-shrink: 0;
+}
+.brand__mark {
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 48px;
+  color: var(--white);
+  background: var(--brand);
+  font: 600 2rem/1 Georgia, serif;
+}
+.brand__name {
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: -.04em;
+  line-height: 1.2;
+}
+.brand__name > span {
+  display: block;
+  color: var(--muted);
+  font-size: 1rem;
+  font-weight: 400;
+  letter-spacing: 0;
+  margin-top: 3px;
+}
+.primary-nav {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+}
+.primary-nav > a:not(.button) {
+  display: inline-flex;
+  align-items: center;
+  min-height: 48px;
+  color: var(--ink);
+  font-size: 1rem;
+  font-weight: 500;
+  text-decoration: none;
+}
+.primary-nav > a:not(.button):hover {
+  color: var(--brand);
+  text-decoration: underline;
+}
+.nav-toggle {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  min-height: 48px;
+  padding: 8px 12px;
+  border: 1px solid var(--line);
+  border-radius: 3px;
+  background: var(--white);
+  color: var(--ink);
+  font-size: 1rem;
+}
+.menu-icon {
+  display: block;
+  width: 18px;
+  height: 12px;
+  border-block: 2px solid currentColor;
+}
+.nav-toggle[aria-expanded="true"] .menu-icon {
+  height: 0;
+  border-bottom: 0;
+}
+.button {
+  min-height: 58px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  padding: 14px 24px;
+  background: var(--brand);
+  color: var(--white);
+  border: 1px solid transparent;
+  border-radius: 3px;
+  text-decoration: none;
+  font-size: 1.125rem;
+  font-weight: 600;
+  line-height: 1.4;
+  text-align: center;
+}
+.button:hover {
+  background: var(--brand-hover);
+  text-decoration: none;
+}
+.button--compact {
+  min-height: 50px;
+  padding: 12px 18px;
+  font-size: 1rem;
+}
+.button--full {
+  width: 100%;
+}
+.button--light {
+  background: var(--white);
+  color: var(--navy);
+}
+.button--light:hover {
+  background: var(--on-dark);
+}
+.text-link {
+  display: inline-flex;
+  align-items: center;
+  min-height: 48px;
+  font-weight: 600;
+}
+
+/* 4. Portada, precio y reserva. */
+.hero {
+  padding-block: 72px;
+  background: linear-gradient(110deg, var(--navy), var(--hero-end));
+  color: var(--white);
+}
+.hero__grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.25fr) minmax(340px, .85fr);
+  gap: 80px;
+  align-items: center;
+}
+.section-label {
+  font-size: 1.0625rem;
+  font-weight: 500;
+  margin-bottom: 20px;
+  color: var(--brand);
+}
+.hero .section-label {
+  color: var(--on-dark);
+}
+.hero h1 {
+  max-width: 600px;
+}
+.hero__lead {
+  max-width: 570px;
+  font-size: 1.375rem;
+  line-height: 1.55;
+  color: var(--on-dark);
+  margin-top: 24px;
+}
+.hero__hours {
+  margin-top: 30px;
+  font-size: 1.0625rem;
+  color: var(--on-dark);
+}
+.hero__hours strong {
+  font-weight: 500;
+  color: var(--white);
+}
+.booking-card {
+  background: var(--white);
+  color: var(--ink);
+  padding: 32px;
+  border-radius: 4px;
+}
+.booking-card h2 {
+  font-size: 1.5rem;
+  line-height: 1.3;
+  letter-spacing: -.025em;
+  text-wrap: initial;
+  max-width: 270px;
+}
+.price {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  margin-block: 24px;
+}
+.price strong {
+  font-size: 3.5rem;
+  line-height: 1;
+  letter-spacing: -.05em;
+  font-weight: 600;
+}
+.price span {
+  font-size: 1.0625rem;
+  line-height: 1.35;
+  max-width: 110px;
+  color: var(--muted);
+}
+summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  cursor: pointer;
+  list-style: none;
+  font-weight: 500;
+}
+summary::-webkit-details-marker {
+  display: none;
+}
+summary > span[aria-hidden] {
+  flex: 0 0 20px;
+  text-align: center;
+  font-size: 1.5rem;
+  line-height: 1;
+}
+details[open] > summary > span[aria-hidden] {
+  transform: rotate(45deg);
+}
+.fees {
+  border-block: 1px solid var(--line);
+  margin-bottom: 24px;
+}
+.fees summary {
+  min-height: 56px;
+  color: var(--brand);
+  font-size: 1.0625rem;
+}
+.fees dl {
+  margin: 0 0 16px;
+  font-size: 1.0625rem;
+}
+.fees dl > div {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 16px;
+  padding-block: 8px;
+}
+.fees dd {
+  margin: 0;
+  font-weight: 700;
+}
+.fees p {
+  color: var(--muted);
+  font-size: 1rem;
+  margin-bottom: 20px;
+}
+.booking-card__call {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 48px;
+  margin-top: 8px;
+  font-size: 1.0625rem;
+  text-align: center;
+}
+
+/* 5. Secciones: proceso, documentos, notaria, preguntas y contacto. */
+.section {
+  padding-block: 80px;
+}
+.section--tinted {
+  background: var(--tint);
+}
+.section-heading {
+  max-width: 730px;
+  margin-bottom: 40px;
+}
+.section-heading > p {
+  color: var(--muted);
+  margin-top: 16px;
+  font-size: 1.25rem;
+}
+.section-heading--split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: end;
+  gap: 80px;
+  max-width: none;
+}
+.section-heading--split > p {
+  margin-top: 0;
+  font-size: 1.125rem;
+}
+.steps {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 40px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.steps li {
+  border-top: 1px solid var(--line);
+  padding-top: 24px;
+}
+.step-number {
+  display: block;
+  margin-bottom: 20px;
+  color: var(--brand);
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+.steps h3 {
+  margin-bottom: 12px;
+}
+.steps p {
+  color: var(--muted);
+}
+.preparation {
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  gap: 28px;
+  margin-top: 40px;
+  padding: 28px 32px;
+  background: var(--tint);
+  border-left: 3px solid var(--brand);
+}
+.preparation h3 {
+  font-size: 1.25rem;
+}
+.preparation ul {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 36px;
+  row-gap: 8px;
+  margin: 0;
+  padding-left: 20px;
+}
+.preparation li {
+  padding-left: 2px;
+  font-size: 1.0625rem;
+}
+.documents {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0 64px;
+}
+.documents article {
+  border-top: 1px solid var(--line);
+  padding-block: 25px;
+}
+.documents p {
+  color: var(--muted);
+  margin-top: 10px;
+  max-width: 490px;
+}
+.section-followup {
+  margin-top: 20px;
+  padding-top: 28px;
+  border-top: 1px solid var(--line);
+}
+.section-followup a {
+  display: inline-block;
+  padding-block: 9px;
+  font-weight: 600;
+  margin-left: 8px;
+}
+.about-grid {
+  display: grid;
+  grid-template-columns: minmax(240px, 360px) minmax(0, 1fr);
+  gap: 80px;
+  align-items: center;
+}
+.notary-photo {
+  overflow: hidden;
+  background: var(--tint);
+  border-radius: 3px;
+}
+.notary-photo img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 4 / 4.5;
+  object-fit: cover;
+  object-position: center 38%;
+}
+.about-copy .section-label {
+  margin-bottom: 16px;
+}
+.about-role {
+  color: var(--brand);
+  font-size: 1.25rem;
+  margin-top: 12px;
+}
+.about-copy > p:not(.section-label, .about-role) {
+  margin-top: 20px;
+  color: var(--muted);
+}
+.about-copy .text-link {
+  margin-top: 12px;
+}
+.about-copy .legal-note {
+  padding-top: 20px;
+  border-top: 1px solid var(--line);
+  font-size: 1rem;
+}
+.faq-grid {
+  display: grid;
+  grid-template-columns: .8fr 1.2fr;
+  gap: 80px;
+}
+.faq-grid .section-heading {
+  margin: 0;
+}
+.faq-grid .text-link {
+  margin-top: 20px;
+}
+.faq-list {
+  border-top: 1px solid var(--line);
+}
+.faq-list > details {
+  border-bottom: 1px solid var(--line);
+}
+.faq-list summary {
+  min-height: 78px;
+  padding-block: 20px;
+  font-size: 1.25rem;
+  line-height: 1.45;
+}
+.faq-answer {
+  padding: 0 38px 24px 0;
+  color: var(--muted);
+}
+.contact-section {
+  padding-block: 56px;
+  background: var(--navy);
+  color: var(--white);
+}
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  gap: 64px;
+}
+.contact-grid h2 {
+  max-width: 630px;
+}
+.contact-grid p {
+  color: var(--on-dark);
+  margin-top: 16px;
+  font-size: 1.25rem;
+}
+.contact-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: center;
+}
+.contact-actions > a:not(.button) {
+  display: flex;
+  align-items: center;
+  min-height: 44px;
+  color: var(--white);
+}
+
+/* 6. Muestras ficticias, separadas de la información real del servicio. */
+.demo-section {
+  background: var(--tint);
+  border-bottom: 1px solid var(--line);
+}
+.demo-stories > summary {
+  padding-block: 22px;
+  font-size: 1rem;
+  color: var(--muted);
+}
+.demo-disclaimer {
+  padding: 20px;
+  background: var(--white);
+  border-left: 3px solid var(--brand);
+  font-size: 1.0625rem;
+}
+.stories {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 32px;
+  padding-block: 32px;
+}
+.stories blockquote {
+  margin: 0 0 24px;
+}
+.stories figcaption {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 1rem;
+  color: var(--muted);
+}
+.stories img {
+  border-radius: 50%;
+  object-fit: cover;
+  width: 56px;
+  height: 56px;
+}
+/* 7. Pie de página. */
+.site-footer {
+  padding-top: 48px;
+}
+.footer-grid {
+  display: grid;
+  grid-template-columns: .8fr 1.3fr 1fr;
+  gap: 40px;
+  padding-bottom: 40px;
+}
+.footer-brand {
+  color: var(--ink);
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-decoration: none;
+}
+.footer-grid h2 {
+  font-size: 1.125rem;
+  letter-spacing: 0;
+  line-height: 1.6;
+  margin-bottom: 8px;
+  font-weight: 700;
+}
+.footer-grid p {
+  color: var(--muted);
+  margin-top: 8px;
+}
+.footer-grid > div > a:not(.footer-brand) {
+  display: block;
+  width: fit-content;
+  padding-block: 6px;
+}
+.email-link {
+  overflow-wrap: anywhere;
+}
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  gap: 32px;
+  border-top: 1px solid var(--line);
+  padding-block: 24px;
+  color: var(--muted);
+  font-size: 1rem;
+}
+.footer-bottom p:last-child {
+  max-width: 580px;
+}
+
+/* 8. Adaptación de la misma página a pantallas menores; no son versiones. */
+@media (max-width: 1120px) {
+  .shell {
+    width: calc(100% - 64px);
+  }
+  .primary-nav {
+    gap: 18px;
+  }
+  .brand__mark {
+    display: none;
+  }
+  .hero__grid {
+    gap: 40px;
+    grid-template-columns: minmax(0, 1fr) minmax(320px, .9fr);
+  }
+  .hero {
+    padding-block: 56px;
+  }
+  .section-heading--split, .about-grid, .faq-grid {
+    gap: 48px;
+  }
+  .steps {
+    gap: 28px;
+  }
+  .booking-card {
+    padding: 28px;
+  }
+  .footer-grid {
+    grid-template-columns: 1fr 1.4fr;
+  }
+}
+@media (max-width: 940px) {
+  .nav-wrap {
+    min-height: 80px;
+    flex-wrap: wrap;
+    gap: 0;
+  }
+  .brand__mark {
+    display: grid;
+  }
+  .nav-toggle:not([hidden]) {
+    display: inline-flex;
+  }
+  .primary-nav {
+    flex-basis: 100%;
+    display: grid;
+    gap: 4px;
+    padding-block: 16px 24px;
+    max-height: calc(100dvh - 80px);
+    overflow-y: auto;
+  }
+  .nav-toggle:not([hidden])[aria-expanded="false"] + .primary-nav {
+    display: none;
+  }
+  .primary-nav > a:not(.button) {
+    font-size: 1.125rem;
+    padding-block: 7px;
+  }
+  .primary-nav .button {
+    width: fit-content;
+    margin-top: 8px;
+  }
+  .hero__lead {
+    font-size: 1.25rem;
+  }
+  .hero__grid {
+    gap: 32px;
+    grid-template-columns: minmax(0, 1fr) minmax(300px, .95fr);
+  }
+  .booking-card {
+    padding: 24px;
+  }
+  .booking-card .button {
+    padding-inline: 14px;
+    gap: 10px;
+  }
+  .preparation {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  .about-grid {
+    grid-template-columns: minmax(200px, .75fr) minmax(0, 1.25fr);
+    gap: 36px;
+  }
+  .faq-grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+  .faq-grid .text-link {
+    margin-top: 8px;
+  }
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+  .contact-actions {
+    flex-direction: row;
+    gap: 28px;
+    flex-wrap: wrap;
+  }
+}
+@media (max-width: 700px) {
+  html {
+    scroll-padding-top: 96px;
+  }
+  .shell {
+    width: calc(100% - 40px);
+  }
+  .brand__name {
+    font-size: 1.375rem;
+  }
+  .brand__mark {
+    width: 36px;
+    height: 43px;
+    font-size: 1.75rem;
+  }
+  .brand {
+    gap: 10px;
+  }
+  .hero {
+    padding-block: 36px 40px;
+  }
+  .hero__grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 28px;
+  }
+  .hero h1 {
+    font-size: clamp(2.35rem, 7.4vw, 3rem);
+    line-height: 1.1;
+  }
+  .hero .section-label {
+    font-size: 1rem;
+    margin-bottom: 16px;
+  }
+  .hero__lead {
+    font-size: 1.1875rem;
+    line-height: 1.5;
+    margin-top: 20px;
+  }
+  .hero__hours {
+    margin-top: 20px;
+    font-size: 1rem;
+  }
+  .hero__hours br {
+    display: none;
+  }
+  .hero__hours strong::before {
+    content: " · ";
+  }
+  .booking-card h2 {
+    max-width: none;
+    font-size: 1.25rem;
+  }
+  .price {
+    margin-block: 20px;
+  }
+  .price strong {
+    font-size: 3rem;
+  }
+  .price span {
+    max-width: none;
+  }
+  .fees {
+    margin-bottom: 20px;
+  }
+  .section {
+    padding-block: 48px;
+  }
+  h2 {
+    font-size: 2rem;
+  }
+  .section-heading {
+    margin-bottom: 28px;
+  }
+  .section-heading > p {
+    font-size: 1.125rem;
+    margin-top: 12px;
+  }
+  .section-heading--split {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+  .steps {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+  .steps li {
+    display: grid;
+    grid-template-columns: 32px 1fr;
+    column-gap: 14px;
+    padding-top: 20px;
+  }
+  .step-number {
+    grid-row: span 2;
+    margin: 0;
+    line-height: 1.3;
+  }
+  .steps h3 {
+    margin-bottom: 8px;
+  }
+  .steps p {
+    grid-column: 2;
+  }
+  .preparation {
+    padding: 24px;
+    margin-top: 28px;
+  }
+  .preparation ul {
+    display: grid;
+    gap: 10px;
+  }
+  .documents {
+    grid-template-columns: 1fr;
+  }
+  .documents article {
+    padding-block: 22px;
+  }
+  .documents p {
+    margin-top: 8px;
+  }
+  .section-followup {
+    margin-top: 0;
+    padding-top: 20px;
+  }
+  .section-followup a {
+    display: block;
+    margin-left: 0;
+  }
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+  .notary-photo {
+    width: min(100%, 320px);
+  }
+  .notary-photo img {
+    aspect-ratio: 4 / 3.5;
+    object-position: center 35%;
+  }
+  .about-role {
+    font-size: 1.125rem;
+  }
+  .faq-list summary {
+    min-height: 76px;
+    font-size: 1.1875rem;
+  }
+  .faq-answer {
+    padding-right: 20px;
+  }
+  .contact-section {
+    padding-block: 40px;
+  }
+  .contact-grid p {
+    font-size: 1.125rem;
+  }
+  .contact-actions {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 8px;
+  }
+  .contact-actions > a:not(.button) {
+    justify-content: center;
+  }
+  .stories {
+    grid-template-columns: 1fr;
+  }
+  .stories figure + figure {
+    padding-top: 24px;
+    border-top: 1px solid var(--line);
+  }
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+    padding-bottom: 28px;
+  }
+  .footer-grid > div > a:not(.footer-brand) {
+    min-height: 44px;
+  }
+  .footer-bottom {
+    flex-direction: column;
+    gap: 12px;
+  }
+}
+@media (max-width: 359px) {
+  .shell {
+    width: calc(100% - 32px);
+  }
+  .brand__mark {
+    display: none;
+  }
+  .booking-card {
+    padding: 20px;
+  }
+  .booking-card .button {
+    font-size: 1.0625rem;
+  }
+}
+    </style>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header">
+      <div class="shell nav-wrap">
+        <a class="brand" href="#top" aria-label="Sign By Me home">
+          <span class="brand__mark" aria-hidden="true">S</span>
+          <span class="brand__name">Sign By Me<span>Online Notary</span>
+          </span>
+        </a>
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav" data-nav-toggle hidden>
+          <span data-menu-label>Menu</span>
+          <span class="menu-icon" aria-hidden="true">
+          </span>
+        </button>
+        <nav id="primary-nav" class="primary-nav" aria-label="Main navigation">
+          <a href="#services">Documents</a>
+          <a href="#pricing">Pricing</a>
+          <a href="#about">Your notary</a>
+          <a href="#faq">Questions</a>
+          <a class="button button--compact" href="https://calendly.com/signbymenotarymiami" target="_blank" rel="noopener">Book an appointment</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main">
+      <section class="hero" id="top" aria-labelledby="hero-title">
+        <div class="shell hero__grid">
+          <div>
+            <p class="section-label">Remote online notary · Miami, Florida</p>
+            <h1 id="hero-title">Notarize your documents online.</h1>
+            <p class="hero__lead">Meet your notary by video, sign with guidance, and receive your notarized document digitally.</p>
+            <p class="hero__hours">Monday–Friday<br>
+              <strong>10 AM–10 PM, Eastern Time</strong>
+            </p>
+          </div>
+          <div class="booking-card" id="pricing">
+            <h2>Know the price before you book.</h2>
+            <p class="price">
+              <strong>$25</strong>
+              <span>First notarial seal</span>
+            </p>
+            <details class="fees">
+              <summary>See additional fees<span aria-hidden="true">+</span>
+              </summary>
+              <dl>
+                <div>
+                  <dt>Each additional seal</dt>
+                  <dd>$8</dd>
+                </div>
+                <div>
+                  <dt>Each additional signer</dt>
+                  <dd>$4</dd>
+                </div>
+                <div>
+                  <dt>Witness</dt>
+                  <dd>$10</dd>
+                </div>
+                <div>
+                  <dt>Witness ID verification</dt>
+                  <dd>$4</dd>
+                </div>
+              </dl>
+              <p>Additional charges depend on the seals, signers and witnesses your document needs.</p>
+            </details>
+            <a class="button button--full" href="https://calendly.com/signbymenotarymiami" target="_blank" rel="noopener">Book an appointment<span aria-hidden="true">↗</span>
+            </a>
+            <a class="booking-card__call" href="tel:+13053023321">Or call (305) 302-3321</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="how-it-works" aria-labelledby="process-title">
+        <div class="shell">
+          <div class="section-heading">
+            <h2 id="process-title">Three steps. One video appointment.</h2>
+            <p>You do not need to visit an office.</p>
+          </div>
+          <ol class="steps" role="list">
+            <li>
+              <span class="step-number" aria-hidden="true">1</span>
+              <h3>Book a time</h3>
+              <p>Choose your appointment and tell us which document you need notarized.</p>
+            </li>
+            <li>
+              <span class="step-number" aria-hidden="true">2</span>
+              <h3>Meet your notary</h3>
+              <p>Complete identity verification and join your live video session.</p>
+            </li>
+            <li>
+              <span class="step-number" aria-hidden="true">3</span>
+              <h3>Sign and receive</h3>
+              <p>Sign electronically with your notary and receive the completed document.</p>
+            </li>
+          </ol>
+          <div class="preparation">
+            <h3>Have these ready</h3>
+            <ul>
+              <li>Your unsigned document</li>
+              <li>A current government-issued photo ID</li>
+              <li>A camera, microphone and reliable internet</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section--tinted" id="services" aria-labelledby="services-title">
+        <div class="shell">
+          <div class="section-heading section-heading--split">
+            <h2 id="services-title">Which document do you need notarized?</h2>
+            <p>These are common requests. Contact us to confirm whether your specific document can be handled online.</p>
+          </div>
+          <div class="documents">
+            <article>
+              <h3>Affidavits &amp; statements</h3>
+              <p>Sworn statements and other documents requiring a notarial act.</p>
+            </article>
+            <article>
+              <h3>Powers of attorney</h3>
+              <p>Authorization documents, subject to their signing and witness requirements.</p>
+            </article>
+            <article>
+              <h3>Real estate documents</h3>
+              <p>Deeds and property-related documents accepted for online notarization.</p>
+            </article>
+            <article>
+              <h3>Business documents</h3>
+              <p>Agreements, corporate resolutions and business authorizations.</p>
+            </article>
+            <article>
+              <h3>Estate planning documents</h3>
+              <p>Eligible trusts and directives. Requirements vary by document.</p>
+            </article>
+            <article>
+              <h3>Consent &amp; authorization forms</h3>
+              <p>Travel consents and other forms that require a notarized signature.</p>
+            </article>
+          </div>
+          <p class="section-followup">Not sure about your document? <a href="tel:+13053023321">Call (305) 302-3321<span aria-hidden="true"> →</span>
+            </a>
+          </p>
+        </div>
+      </section>
+
+      <section class="section" id="about" aria-labelledby="about-title">
+        <div class="shell about-grid">
+          <figure class="notary-photo">
+            <img src="assets/susana-profile.jpg" alt="Susana Perla Maniera" width="420" height="500" loading="lazy">
+          </figure>
+          <div class="about-copy">
+            <p class="section-label">Your notary</p>
+            <h2 id="about-title">Susana Perla Maniera</h2>
+            <p class="about-role">Remote online notary · Miami, Florida</p>
+            <p>Know who will be on the other side of the call. Susana guides you through identity verification and the signing process, one step at a time.</p>
+            <p>If you are unsure what to prepare, get in touch before your appointment.</p>
+            <a class="text-link" href="mailto:signbymenotarymiami@gmail.com">Email Susana<span aria-hidden="true"> →</span>
+            </a>
+            <p class="legal-note">Sign By Me provides notarial services, not legal advice or document preparation.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section--tinted" id="faq" aria-labelledby="faq-title">
+        <div class="shell faq-grid">
+          <div class="section-heading">
+            <h2 id="faq-title">Before you book.</h2>
+            <p>Answers to the practical questions.</p>
+            <a class="text-link" href="tel:+13053023321">Prefer to ask us? Call<span aria-hidden="true"> →</span>
+            </a>
+          </div>
+          <div class="faq-list">
+            <details name="faq">
+              <summary>Can my document be notarized online?<span aria-hidden="true">+</span>
+              </summary>
+              <div class="faq-answer">
+                <p>That depends on the document, its signing requirements and who will receive it. Check that the recipient accepts online notarization, then contact us to confirm the requirements before booking.</p>
+              </div>
+            </details>
+            <details name="faq">
+              <summary>What identification do I need?<span aria-hidden="true">+</span>
+              </summary>
+              <div class="faq-answer">
+                <p>Have a current government-issued photo ID ready. The online platform also requires identity verification. Contact us before booking if you have questions about your ID or eligibility.</p>
+              </div>
+            </details>
+            <details name="faq">
+              <summary>Can I use my phone or tablet?<span aria-hidden="true">+</span>
+              </summary>
+              <div class="faq-answer">
+                <p>You need a device with a working camera and microphone, a reliable internet connection and a compatible browser. Confirm your device meets the session platform's requirements before the appointment.</p>
+              </div>
+            </details>
+            <details name="faq">
+              <summary>What if my document needs witnesses?<span aria-hidden="true">+</span>
+              </summary>
+              <div class="faq-answer">
+                <p>Tell us before booking so the witness requirements and any additional fees can be confirmed. Witness service is $10, and witness ID verification is $4.</p>
+              </div>
+            </details>
+            <details name="faq">
+              <summary>Should I sign the document beforehand?<span aria-hidden="true">+</span>
+              </summary>
+              <div class="faq-answer">
+                <p>Have your document ready and unsigned. Your notary will guide you through the required signing steps during the video appointment.</p>
+              </div>
+            </details>
+            <details name="faq">
+              <summary>Can you help me choose a legal document?<span aria-hidden="true">+</span>
+              </summary>
+              <div class="faq-answer">
+                <p>No. Sign By Me does not provide legal advice, prepare legal documents or choose a notarial act for you. Ask an attorney or the document's recipient if you need help deciding what is required.</p>
+              </div>
+            </details>
+          </div>
+        </div>
+      </section>
+
+      <section class="contact-section" aria-labelledby="contact-title">
+        <div class="shell contact-grid">
+          <div>
+            <h2 id="contact-title">Ready to notarize your document?</h2>
+            <p>Book online or call with a question.</p>
+          </div>
+          <div class="contact-actions">
+            <a class="button button--light" href="https://calendly.com/signbymenotarymiami" target="_blank" rel="noopener">Book an appointment<span aria-hidden="true">↗</span>
+            </a>
+            <a href="tel:+13053023321">(305) 302-3321</a>
+          </div>
+        </div>
+      </section>
+
+      <aside class="demo-section" aria-label="Presentation-only content">
+        <details class="shell demo-stories">
+          <summary>Design preview: sample testimonials<span aria-hidden="true">+</span>
+          </summary>
+          <p class="demo-disclaimer">Fictional examples for this design presentation only. Names, stories and AI-generated portraits do not represent actual clients or reviews.</p>
+          <div class="stories">
+            <figure>
+              <blockquote>“I knew what to prepare and what it would cost before my appointment.”</blockquote>
+              <figcaption>
+                <img src="assets/testimonials/demo-client-elena.jpg" alt="Fictional portrait of Elena" width="56" height="56" loading="lazy">
+                <span>Elena · Fictional example</span>
+              </figcaption>
+            </figure>
+            <figure>
+              <blockquote>“The signing steps were explained clearly during the video call.”</blockquote>
+              <figcaption>
+                <img src="assets/testimonials/demo-client-marco.jpg" alt="Fictional portrait of Marco" width="56" height="56" loading="lazy">
+                <span>Marco · Fictional example</span>
+              </figcaption>
+            </figure>
+            <figure>
+              <blockquote>“I could arrange my appointment without a trip to an office.”</blockquote>
+              <figcaption>
+                <img src="assets/testimonials/demo-client-aisha.jpg" alt="Fictional portrait of Aisha" width="56" height="56" loading="lazy">
+                <span>Aisha · Fictional example</span>
+              </figcaption>
+            </figure>
+          </div>
+        </details>
+      </aside>
+    </main>
+
+    <footer class="site-footer">
+      <div class="shell footer-grid">
+        <div>
+          <a class="footer-brand" href="#top">Sign By Me</a>
+          <p>Remote online notary<br>Miami, Florida</p>
+        </div>
+        <div>
+          <h2>Contact</h2>
+          <a href="tel:+13053023321">(305) 302-3321</a>
+          <a class="email-link" href="mailto:signbymenotarymiami@gmail.com">signbymenotarymiami@gmail.com</a>
+        </div>
+        <div>
+          <h2>Office hours</h2>
+          <p>Monday–Friday<br>10 AM–10 PM, Eastern Time</p>
+        </div>
+      </div>
+      <div class="shell footer-bottom">
+        <p>© <span data-year>2026</span> Sign By Me. All rights reserved.</p>
+        <p>Not a law firm. No legal advice. Document eligibility and recipient acceptance must be confirmed.</p>
+      </div>
+    </footer>
+    <script>
+// Solo navegación móvil y año del pie. Las tarifas y preguntas usan <details>.
+const navToggle = document.querySelector('[data-nav-toggle]');
+const nav = document.getElementById('primary-nav');
+const menuLabel = document.querySelector('[data-menu-label]');
+const mobileLayout = window.matchMedia('(max-width: 940px)');
+
+function setMenu(open, restoreFocus = false) {
+  navToggle.setAttribute('aria-expanded', String(open));
+  menuLabel.textContent = open ? 'Close' : 'Menu';
+  if (restoreFocus) navToggle.focus();
+}
+
+navToggle.hidden = false;
+navToggle.addEventListener('click', () => {
+  setMenu(navToggle.getAttribute('aria-expanded') !== 'true');
+});
+nav.addEventListener('click', (event) => {
+  if (event.target.closest('a')) setMenu(false);
+});
+document.addEventListener('keydown', (event) => {
+  if (event.key === 'Escape' && navToggle.getAttribute('aria-expanded') === 'true') {
+    setMenu(false, true);
+  }
+});
+document.addEventListener('click', (event) => {
+  if (!event.target.closest('.site-header')) setMenu(false);
+});
+mobileLayout.addEventListener('change', () => setMenu(false));
+document.querySelectorAll('[data-year]').forEach((element) => {
+  element.textContent = new Date().getFullYear();
+});
+    </script>
+  </body>
+</html>
